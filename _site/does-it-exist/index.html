@@ -273,11 +273,24 @@
         
         <p>Wooh! Existence. Simple enough for a simple post.</p>
 
-<p>While working with data in Excel, often, the question “Does this data exist within another data set?” comes up. There are several methods of accomplishing this task.</p>
+<p>While working with data in Excel, often, the question “Does this data exist within another data set?” comes up. Below, I’ve outlined a couple of methods to accomplish this task.</p>
 
-<p>My go-to was the =VLOOKUP(cell,single_column,1,0). If the value exists, it simply returns the same value you’re after, else #N/A, which means that the value doesn’t exist.</p>
+<h3 id="vlookup-or-match">VLOOKUP or MATCH</h3>
+<p>My go-to method was <em><code class="highlighter-rouge">=VLOOKUP(cell,single_column,1,0)</code></em>. If the value exists, it simply returns itself, else #N/A, which means that the value doesn’t exist.</p>
 
-<p><img src="/assets/Exists_Using_VLOOKUP.PNG" alt="Exists" /></p>
+<p><img src="/assets/Exists_Using_VLOOKUP.PNG" alt="VLOOKUP" /></p>
+
+<p>Similarly, the <em><code class="highlighter-rouge">=MATCH(cell,single_column,0)</code></em> method will yield the same outcome but instead of returning itself, it returns the first row number of the value you’re after.</p>
+
+<p><img src="/assets/Exists_Using_MATCH.PNG" alt="MATCH" /></p>
+
+<h3 id="countif">COUNTIF</h3>
+
+<p><a href="https://exceljet.net/formula/value-exists-in-a-range" title="Visit EXCELJET">EXCELJET</a> uses <code class="highlighter-rouge">=COUNTIF(range, cell) &gt; 0</code>. This method counts the number of times a value exists within a given range. That’s an added benefit as it doesn’t limit the lookup to a single column.</p>
+
+<p><img src="/assets/Exists_Using_COUNTIF.PNG" alt="COUNTIF" /></p>
+
+<h3 id="udf---user-defined-function-using-vba">UDF - User Defined Function Using VBA</h3>
 
         
       </section>
