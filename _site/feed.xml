@@ -1,1 +1,13 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-12-08T11:56:51-05:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Site Title</title><subtitle>An amazing website.</subtitle><author><name>Your Name</name></author><entry><title type="html">Test Post</title><link href="http://localhost:4000/test-post/" rel="alternate" type="text/html" title="Test Post" /><published>2018-12-07T00:00:00-05:00</published><updated>2018-12-07T00:00:00-05:00</updated><id>http://localhost:4000/test-post</id><content type="html" xml:base="http://localhost:4000/test-post/">&lt;p&gt;this is a test post&lt;/p&gt;</content><author><name>Your Name</name></author><summary type="html">this is a test post</summary></entry></feed>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-12-09T18:58:50-05:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Some New Title</title><subtitle>An amazing website.</subtitle><author><name>Your Name</name></author><entry><title type="html">Does It Exist</title><link href="http://localhost:4000/does-it-exist/" rel="alternate" type="text/html" title="Does It Exist" /><published>2018-12-07T00:00:00-05:00</published><updated>2018-12-07T00:00:00-05:00</updated><id>http://localhost:4000/does-it-exist</id><content type="html" xml:base="http://localhost:4000/does-it-exist/">&lt;p&gt;Wooh! Existence. Simple enough for a simple post.&lt;/p&gt;
+
+&lt;p&gt;While working with data in Excel, often, the question “Does this data exist within another data set?” comes up. There are several methods of accomplishing this task.&lt;/p&gt;
+
+&lt;p&gt;My go-to was the =VLOOKUP(cell,single_column,1,0). If the value exists, it simply returns the same value you’re after, else #N/A, which means that the value doesn’t exist.&lt;/p&gt;
+
+&lt;figure class=&quot;&quot;&gt;
+  &lt;img src=&quot;/assets/Exists_Using_VLOOKUP.jpg&quot; alt=&quot;&quot; /&gt;
+  
+    &lt;figcaption&gt;Exists using VLOOKUP.
+&lt;/figcaption&gt;
+  
+&lt;/figure&gt;</content><author><name>Your Name</name></author><summary type="html">Wooh! Existence. Simple enough for a simple post.</summary></entry></feed>
