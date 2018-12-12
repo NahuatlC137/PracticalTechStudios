@@ -1,50 +1,46 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-12-11T21:51:52-05:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Some New Title</title><subtitle>An amazing website.</subtitle><author><name>Your Name</name></author><entry><title type="html">Does It Exist</title><link href="http://localhost:4000/does-it-exist/" rel="alternate" type="text/html" title="Does It Exist" /><published>2018-12-07T00:00:00-05:00</published><updated>2018-12-07T00:00:00-05:00</updated><id>http://localhost:4000/does-it-exist</id><content type="html" xml:base="http://localhost:4000/does-it-exist/">&lt;p&gt;Wooh! Existence. Simple enough.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-12-11T23:32:53-05:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Some New Title</title><subtitle>An amazing website.</subtitle><author><name>Your Name</name></author><entry><title type="html">Does It Exist</title><link href="http://localhost:4000/does-it-exist/" rel="alternate" type="text/html" title="Does It Exist" /><published>2018-12-07T00:00:00-05:00</published><updated>2018-12-07T00:00:00-05:00</updated><id>http://localhost:4000/does-it-exist</id><content type="html" xml:base="http://localhost:4000/does-it-exist/">&lt;p&gt;Wooh! Existence. Simple enough.&lt;/p&gt;
 
-&lt;p&gt;While working with data in Excel, often, the question “Does this data exist within another data set?” comes up. Below, I’ve outlined a couple of methods to accomplish this task.&lt;/p&gt;
+&lt;p&gt;While working with data in Excel, often, we question “Does this data exist within another data set?”. Below, I’ve outlined a couple of methods to accomplish this task.&lt;/p&gt;
 
-&lt;h3 id=&quot;vlookup-or-match&quot;&gt;VLOOKUP or MATCH&lt;/h3&gt;
+&lt;h5 id=&quot;vlookup-or-match&quot;&gt;VLOOKUP or MATCH&lt;/h5&gt;
 &lt;p&gt;My go-to function was &lt;code class=&quot;highlighter-rouge&quot;&gt;=VLOOKUP(cell,single_column,1,0)&lt;/code&gt;. If the value exists, it simply returns itself, else #N/A, which means that the value doesn’t exist.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/Exists_Using_VLOOKUP.PNG&quot; alt=&quot;VLOOKUP&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;Similarly, the function &lt;code class=&quot;highlighter-rouge&quot;&gt;=MATCH(cell,single_column,0)&lt;/code&gt; will yield the same outcome but instead of returning itself, it returns the row number of the found value, else #N/A.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://docs.microsoft.com/en-us/office/vba/api/excel.worksheetfunction.match&quot;&gt;MATCH&lt;/a&gt; will yield the same result, albeit, if the value exists, the function will return the row number of the found value.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/Exists_Using_MATCH.PNG&quot; alt=&quot;MATCH&quot; /&gt;&lt;/p&gt;
+&lt;h5 id=&quot;countif&quot;&gt;COUNTIF&lt;/h5&gt;
 
-&lt;h3 id=&quot;countif&quot;&gt;COUNTIF&lt;/h3&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://exceljet.net/formula/value-exists-in-a-range&quot; title=&quot;Visit EXCELJET&quot;&gt;EXCELJET&lt;/a&gt; uses &lt;code class=&quot;highlighter-rouge&quot;&gt;=COUNTIF(range, cell) &amp;gt; 0&lt;/code&gt;. This method counts the number of times a value exists within a given range. Using &lt;code class=&quot;highlighter-rouge&quot;&gt;COUNTIF&lt;/code&gt; doesn’t limit the lookup to a single column, meaning you can check across multiple columns.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://exceljet.net/formula/value-exists-in-a-range&quot; title=&quot;Visit EXCELJET&quot;&gt;EXCELJET&lt;/a&gt; uses &lt;code class=&quot;highlighter-rouge&quot;&gt;=COUNTIF(range, cell) &amp;gt; 0&lt;/code&gt;. This method counts the number of times a value exists within a given range. &lt;code class=&quot;highlighter-rouge&quot;&gt;COUNTIF&lt;/code&gt; has the added ability to check across multiple columns.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/Exists_Using_COUNTIF.PNG&quot; alt=&quot;COUNTIF&quot; /&gt;&lt;/p&gt;
 
-&lt;h3 id=&quot;udf---user-defined-function-using-vba&quot;&gt;UDF - User Defined Function Using VBA&lt;/h3&gt;
+&lt;h5 id=&quot;udf---user-defined-function-using-vba&quot;&gt;UDF - User Defined Function Using VBA&lt;/h5&gt;
 
-&lt;p&gt;Because I was constantly checking if one dataset existed within another, I wrote a User Defined Function in VBA. Checkout the 18 lines of code below!&lt;/p&gt;
+&lt;p&gt;Because I was constantly checking if one dataset existed within another, I wrote a User Defined Function in VBA. Checkout the 18 lines of code below! I’ve commented a good bit to help explain the code.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/Exists_Using_COUNTIF.PNG&quot; alt=&quot;COUNTIF&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;The idea is that TRUE or FALSE outputs won’t always clearly explain what’s going on in the data. Using the optional TRUE_MATCH or FALSE_MATCH string variables will help in that aspect.&lt;/p&gt;
 
-&lt;div class=&quot;language-vb highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;'Determines if a given value exists in a range.&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;'Defaults to True and False, with the option to return given true and false values.&lt;/span&gt;
-
+&lt;div class=&quot;language-vb highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
 &lt;span class=&quot;k&quot;&gt;Function&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;EXISTSIN&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;ByVal&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;CELL&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;As&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Range&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;ByVal&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;LOOK_IN_RANGE&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;As&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Range&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;Optional&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;ByVal&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;TRUE_MATCH&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;As&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;Optional&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;ByVal&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;FALSE_MATCH&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;As&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 
 &lt;span class=&quot;c1&quot;&gt;'Declaring variables&lt;/span&gt;
 &lt;span class=&quot;k&quot;&gt;Dim&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;Exists&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;As&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Boolean&lt;/span&gt;
 
-    &lt;span class=&quot;c1&quot;&gt;'using the match function from above nested within IsNumeric.&lt;/span&gt;
-    &lt;span class=&quot;c1&quot;&gt;'if the Match function returns a number, IsNumeric will set the Exists variable to True.&lt;/span&gt;
-    &lt;span class=&quot;c1&quot;&gt;'if the Match function doesn't return a number, IsNumeric will set the Exists variable to False.&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;Exists&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;IsNumeric&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Application&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Match&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;CELL&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Value&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;LOOK_IN_RANGE&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;'using the CountIf function, EXISTSIN can look across multiple columns.&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;'if CountIf is greater than 0, it sets the Exists variable to TRUE.&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;'if CountIf is 0, it sets the Exists variable to FALSE.&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;Exists&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Application&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;CountIf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;LOOK_IN_RANGE&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;CELL&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Value&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;
     
     &lt;span class=&quot;k&quot;&gt;Select&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;Case&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Exists&lt;/span&gt;
     
-        &lt;span class=&quot;c1&quot;&gt;'1. here, the function checks if variable Exists is True or False,&lt;/span&gt;
+        &lt;span class=&quot;c1&quot;&gt;'1. here, the function checks if variable Exists is set to TRUE or FALSE,&lt;/span&gt;
         &lt;span class=&quot;c1&quot;&gt;'2. it checks whether or not the user is using the optional TRUE_MATCH or FALSE_MATCH strings&lt;/span&gt;
         &lt;span class=&quot;c1&quot;&gt;'and define the output of EXISTSIN depending on 1 and 2.&lt;/span&gt;
-        
+
         &lt;span class=&quot;k&quot;&gt;Case&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;True&lt;/span&gt;
-            &lt;span class=&quot;k&quot;&gt;If&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;TRUE_MATCH&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;&quot;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;Then&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;'checking to see if TRUE_MATCH is blank&lt;/span&gt;
-                &lt;span class=&quot;n&quot;&gt;EXISTSIN&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Exists&lt;/span&gt;   &lt;span class=&quot;c1&quot;&gt;'if TRUE_MATCH is blank, return the value of IsNumeric(Application.Match(CELL.Value, LOOK_IN_RANGE, 0))&lt;/span&gt;
+            &lt;span class=&quot;k&quot;&gt;If&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;TRUE_MATCH&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;&quot;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;Then&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;'checking to see if TRUE_MATCH is blank&lt;/span&gt;
+                &lt;span class=&quot;n&quot;&gt;EXISTSIN&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Exists&lt;/span&gt;   &lt;span class=&quot;c1&quot;&gt;'if TRUE_MATCH is blank, simply return TRUE&lt;/span&gt;
             &lt;span class=&quot;k&quot;&gt;Else&lt;/span&gt;
                 &lt;span class=&quot;n&quot;&gt;EXISTSIN&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;TRUE_MATCH&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;'if TRUE_MATCH isn't blank, then return what the user entered.&lt;/span&gt;
             &lt;span class=&quot;k&quot;&gt;End&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;If&lt;/span&gt;
@@ -52,7 +48,7 @@
         &lt;span class=&quot;k&quot;&gt;Case&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;False&lt;/span&gt;
         
             &lt;span class=&quot;k&quot;&gt;If&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;FALSE_MATCH&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;&quot;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;Then&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;'checking to see if FALSE_MATCH is blank&lt;/span&gt;
-                &lt;span class=&quot;n&quot;&gt;EXISTSIN&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Exists&lt;/span&gt;    &lt;span class=&quot;c1&quot;&gt;'if FALSE_MATCH is blank, return the value of IsNumeric(Application.Match(CELL.Value, LOOK_IN_RANGE, 0))&lt;/span&gt;
+                &lt;span class=&quot;n&quot;&gt;EXISTSIN&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Exists&lt;/span&gt;    &lt;span class=&quot;c1&quot;&gt;'if FALSE_MATCH is blank, simply return FALSE&lt;/span&gt;
             &lt;span class=&quot;k&quot;&gt;Else&lt;/span&gt;
                 &lt;span class=&quot;n&quot;&gt;EXISTSIN&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;FALSE_MATCH&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;'if FALSE_MATCH isn't blank, then return what the user entered.&lt;/span&gt;
             &lt;span class=&quot;k&quot;&gt;End&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;If&lt;/span&gt;
@@ -60,4 +56,11 @@
     &lt;span class=&quot;k&quot;&gt;End&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;Select&lt;/span&gt;
 
 &lt;span class=&quot;k&quot;&gt;End&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;Function&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Your Name</name></author><summary type="html">Wooh! Existence. Simple enough.</summary></entry></feed>
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;As an illustration, column E and F contain World Cup finalists up to 2014. In column H, there are 4 countries for which to find out if they have ever been a World Cup finalist.&lt;/p&gt;
+
+&lt;p&gt;Simply typing &lt;code class=&quot;highlighter-rouge&quot;&gt;=EXISTSIN(cell,range)&lt;/code&gt; will yield standard TRUE and FALSE outputs. Alternatively, by entering a different TRUE or FALSE default, the analysis becomes clear to the reader.&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;=EXISTSIN(cell, range, &quot;Finalist&quot;, &quot;Not a Finalist&quot;)&lt;/code&gt; makes clear who was and who wasn’t in a final match.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/Exists_Using_UDF.PNG&quot; alt=&quot;COUNTIF&quot; /&gt;&lt;/p&gt;</content><author><name>Your Name</name></author><summary type="html">Wooh! Existence. Simple enough.</summary></entry></feed>

@@ -104,7 +104,7 @@
 
   </head>
 
-  <body class="layout--single">
+  <body class="layout--single wide">
 
     <!--[if lt IE 9]>
 <div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
@@ -263,7 +263,7 @@
 
 
 
-  1 minute read
+  2 minute read
 </p>
           
         </header>
@@ -273,51 +273,47 @@
         
         <p>Wooh! Existence. Simple enough.</p>
 
-<p>While working with data in Excel, often, the question “Does this data exist within another data set?” comes up. Below, I’ve outlined a couple of methods to accomplish this task.</p>
+<p>While working with data in Excel, often, we question “Does this data exist within another data set?”. Below, I’ve outlined a couple of methods to accomplish this task.</p>
 
-<h3 id="vlookup-or-match">VLOOKUP or MATCH</h3>
+<h5 id="vlookup-or-match">VLOOKUP or MATCH</h5>
 <p>My go-to function was <code class="highlighter-rouge">=VLOOKUP(cell,single_column,1,0)</code>. If the value exists, it simply returns itself, else #N/A, which means that the value doesn’t exist.</p>
 
 <p><img src="/assets/Exists_Using_VLOOKUP.PNG" alt="VLOOKUP" /></p>
 
-<p>Similarly, the function <code class="highlighter-rouge">=MATCH(cell,single_column,0)</code> will yield the same outcome but instead of returning itself, it returns the row number of the found value, else #N/A.</p>
+<p><a href="https://docs.microsoft.com/en-us/office/vba/api/excel.worksheetfunction.match">MATCH</a> will yield the same result, albeit, if the value exists, the function will return the row number of the found value.</p>
 
-<p><img src="/assets/Exists_Using_MATCH.PNG" alt="MATCH" /></p>
+<h5 id="countif">COUNTIF</h5>
 
-<h3 id="countif">COUNTIF</h3>
-
-<p><a href="https://exceljet.net/formula/value-exists-in-a-range" title="Visit EXCELJET">EXCELJET</a> uses <code class="highlighter-rouge">=COUNTIF(range, cell) &gt; 0</code>. This method counts the number of times a value exists within a given range. Using <code class="highlighter-rouge">COUNTIF</code> doesn’t limit the lookup to a single column, meaning you can check across multiple columns.</p>
+<p><a href="https://exceljet.net/formula/value-exists-in-a-range" title="Visit EXCELJET">EXCELJET</a> uses <code class="highlighter-rouge">=COUNTIF(range, cell) &gt; 0</code>. This method counts the number of times a value exists within a given range. <code class="highlighter-rouge">COUNTIF</code> has the added ability to check across multiple columns.</p>
 
 <p><img src="/assets/Exists_Using_COUNTIF.PNG" alt="COUNTIF" /></p>
 
-<h3 id="udf---user-defined-function-using-vba">UDF - User Defined Function Using VBA</h3>
+<h5 id="udf---user-defined-function-using-vba">UDF - User Defined Function Using VBA</h5>
 
-<p>Because I was constantly checking if one dataset existed within another, I wrote a User Defined Function in VBA. Checkout the 18 lines of code below!</p>
+<p>Because I was constantly checking if one dataset existed within another, I wrote a User Defined Function in VBA. Checkout the 18 lines of code below! I’ve commented a good bit to help explain the code.</p>
 
-<p><img src="/assets/Exists_Using_COUNTIF.PNG" alt="COUNTIF" /></p>
+<p>The idea is that TRUE or FALSE outputs won’t always clearly explain what’s going on in the data. Using the optional TRUE_MATCH or FALSE_MATCH string variables will help in that aspect.</p>
 
-<div class="language-vb highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">'Determines if a given value exists in a range.</span>
-<span class="c1">'Defaults to True and False, with the option to return given true and false values.</span>
-
+<div class="language-vb highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
 <span class="k">Function</span> <span class="nf">EXISTSIN</span><span class="p">(</span><span class="k">ByVal</span> <span class="n">CELL</span> <span class="ow">As</span> <span class="n">Range</span><span class="p">,</span> <span class="k">ByVal</span> <span class="n">LOOK_IN_RANGE</span> <span class="ow">As</span> <span class="n">Range</span><span class="p">,</span> <span class="k">Optional</span> <span class="k">ByVal</span> <span class="n">TRUE_MATCH</span> <span class="ow">As</span> <span class="kt">String</span><span class="p">,</span> <span class="k">Optional</span> <span class="k">ByVal</span> <span class="n">FALSE_MATCH</span> <span class="ow">As</span> <span class="kt">String</span><span class="p">)</span>
 
 <span class="c1">'Declaring variables</span>
 <span class="k">Dim</span> <span class="nv">Exists</span> <span class="ow">As</span> <span class="kt">Boolean</span>
 
-    <span class="c1">'using the match function from above nested within IsNumeric.</span>
-    <span class="c1">'if the Match function returns a number, IsNumeric will set the Exists variable to True.</span>
-    <span class="c1">'if the Match function doesn't return a number, IsNumeric will set the Exists variable to False.</span>
-    <span class="n">Exists</span> <span class="o">=</span> <span class="n">IsNumeric</span><span class="p">(</span><span class="n">Application</span><span class="p">.</span><span class="n">Match</span><span class="p">(</span><span class="n">CELL</span><span class="p">.</span><span class="n">Value</span><span class="p">,</span> <span class="n">LOOK_IN_RANGE</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span>
+    <span class="c1">'using the CountIf function, EXISTSIN can look across multiple columns.</span>
+    <span class="c1">'if CountIf is greater than 0, it sets the Exists variable to TRUE.</span>
+    <span class="c1">'if CountIf is 0, it sets the Exists variable to FALSE.</span>
+    <span class="n">Exists</span> <span class="o">=</span> <span class="n">Application</span><span class="p">.</span><span class="n">CountIf</span><span class="p">(</span><span class="n">LOOK_IN_RANGE</span><span class="p">,</span> <span class="n">CELL</span><span class="p">.</span><span class="n">Value</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span>
     
     <span class="k">Select</span> <span class="k">Case</span> <span class="n">Exists</span>
     
-        <span class="c1">'1. here, the function checks if variable Exists is True or False,</span>
+        <span class="c1">'1. here, the function checks if variable Exists is set to TRUE or FALSE,</span>
         <span class="c1">'2. it checks whether or not the user is using the optional TRUE_MATCH or FALSE_MATCH strings</span>
         <span class="c1">'and define the output of EXISTSIN depending on 1 and 2.</span>
-        
+
         <span class="k">Case</span> <span class="k">True</span>
-            <span class="k">If</span> <span class="n">TRUE_MATCH</span> <span class="o">=</span> <span class="s">""</span> <span class="k">Then</span> <span class="c1">'checking to see if TRUE_MATCH is blank</span>
-                <span class="n">EXISTSIN</span> <span class="o">=</span> <span class="n">Exists</span>   <span class="c1">'if TRUE_MATCH is blank, return the value of IsNumeric(Application.Match(CELL.Value, LOOK_IN_RANGE, 0))</span>
+            <span class="k">If</span> <span class="n">TRUE_MATCH</span> <span class="o">=</span> <span class="s">""</span> <span class="k">Then</span><span class="c1">'checking to see if TRUE_MATCH is blank</span>
+                <span class="n">EXISTSIN</span> <span class="o">=</span> <span class="n">Exists</span>   <span class="c1">'if TRUE_MATCH is blank, simply return TRUE</span>
             <span class="k">Else</span>
                 <span class="n">EXISTSIN</span> <span class="o">=</span> <span class="n">TRUE_MATCH</span> <span class="c1">'if TRUE_MATCH isn't blank, then return what the user entered.</span>
             <span class="k">End</span> <span class="k">If</span>
@@ -325,7 +321,7 @@
         <span class="k">Case</span> <span class="k">False</span>
         
             <span class="k">If</span> <span class="n">FALSE_MATCH</span> <span class="o">=</span> <span class="s">""</span> <span class="k">Then</span> <span class="c1">'checking to see if FALSE_MATCH is blank</span>
-                <span class="n">EXISTSIN</span> <span class="o">=</span> <span class="n">Exists</span>    <span class="c1">'if FALSE_MATCH is blank, return the value of IsNumeric(Application.Match(CELL.Value, LOOK_IN_RANGE, 0))</span>
+                <span class="n">EXISTSIN</span> <span class="o">=</span> <span class="n">Exists</span>    <span class="c1">'if FALSE_MATCH is blank, simply return FALSE</span>
             <span class="k">Else</span>
                 <span class="n">EXISTSIN</span> <span class="o">=</span> <span class="n">FALSE_MATCH</span> <span class="c1">'if FALSE_MATCH isn't blank, then return what the user entered.</span>
             <span class="k">End</span> <span class="k">If</span>
@@ -334,7 +330,13 @@
 
 <span class="k">End</span> <span class="k">Function</span>
 </code></pre></div></div>
+<p>As an illustration, column E and F contain World Cup finalists up to 2014. In column H, there are 4 countries for which to find out if they have ever been a World Cup finalist.</p>
 
+<p>Simply typing <code class="highlighter-rouge">=EXISTSIN(cell,range)</code> will yield standard TRUE and FALSE outputs. Alternatively, by entering a different TRUE or FALSE default, the analysis becomes clear to the reader.</p>
+
+<p><code class="highlighter-rouge">=EXISTSIN(cell, range, "Finalist", "Not a Finalist")</code> makes clear who was and who wasn’t in a final match.</p>
+
+<p><img src="/assets/Exists_Using_UDF.PNG" alt="COUNTIF" /></p>
 
         
       </section>
