@@ -24,6 +24,8 @@ Similarly, the function `=MATCH(cell,single_column,0)` will yield the same outco
 
 Because I was constantly checking if one dataset existed within another, I wrote a User Defined Function in VBA. Checkout the 18 lines of code below!
 
+![COUNTIF](/assets/Exists_Using_COUNTIF.PNG)
+
 ```vb
 'Determines if a given value exists in a range.
 'Defaults to True and False, with the option to return given true and false values.
