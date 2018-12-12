@@ -1,25 +1,35 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-12-11T23:32:53-05:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Some New Title</title><subtitle>An amazing website.</subtitle><author><name>Your Name</name></author><entry><title type="html">Does It Exist</title><link href="http://localhost:4000/does-it-exist/" rel="alternate" type="text/html" title="Does It Exist" /><published>2018-12-07T00:00:00-05:00</published><updated>2018-12-07T00:00:00-05:00</updated><id>http://localhost:4000/does-it-exist</id><content type="html" xml:base="http://localhost:4000/does-it-exist/">&lt;p&gt;Wooh! Existence. Simple enough.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-12-11T23:46:02-05:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Some New Title</title><subtitle>An amazing website.</subtitle><author><name>Your Name</name></author><entry><title type="html">Does It Exist</title><link href="http://localhost:4000/does-it-exist/" rel="alternate" type="text/html" title="Does It Exist" /><published>2018-12-07T00:00:00-05:00</published><updated>2018-12-07T00:00:00-05:00</updated><id>http://localhost:4000/does-it-exist</id><content type="html" xml:base="http://localhost:4000/does-it-exist/">&lt;p&gt;Wooh! Existence. Simple enough.&lt;/p&gt;
 
-&lt;p&gt;While working with data in Excel, often, we question “Does this data exist within another data set?”. Below, I’ve outlined a couple of methods to accomplish this task.&lt;/p&gt;
+&lt;p&gt;While working with data in Excel, often, we question “Does this value(s) exist within a data set?”. Below, I’ve outlined a couple of methods to answer this question.&lt;/p&gt;
 
-&lt;h5 id=&quot;vlookup-or-match&quot;&gt;VLOOKUP or MATCH&lt;/h5&gt;
+&lt;h4 id=&quot;vlookup-or-match&quot;&gt;VLOOKUP or MATCH&lt;/h4&gt;
 &lt;p&gt;My go-to function was &lt;code class=&quot;highlighter-rouge&quot;&gt;=VLOOKUP(cell,single_column,1,0)&lt;/code&gt;. If the value exists, it simply returns itself, else #N/A, which means that the value doesn’t exist.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/Exists_Using_VLOOKUP.PNG&quot; alt=&quot;VLOOKUP&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;https://docs.microsoft.com/en-us/office/vba/api/excel.worksheetfunction.match&quot;&gt;MATCH&lt;/a&gt; will yield the same result, albeit, if the value exists, the function will return the row number of the found value.&lt;/p&gt;
 
-&lt;h5 id=&quot;countif&quot;&gt;COUNTIF&lt;/h5&gt;
+&lt;h4 id=&quot;countif&quot;&gt;COUNTIF&lt;/h4&gt;
 
 &lt;p&gt;&lt;a href=&quot;https://exceljet.net/formula/value-exists-in-a-range&quot; title=&quot;Visit EXCELJET&quot;&gt;EXCELJET&lt;/a&gt; uses &lt;code class=&quot;highlighter-rouge&quot;&gt;=COUNTIF(range, cell) &amp;gt; 0&lt;/code&gt;. This method counts the number of times a value exists within a given range. &lt;code class=&quot;highlighter-rouge&quot;&gt;COUNTIF&lt;/code&gt; has the added ability to check across multiple columns.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/Exists_Using_COUNTIF.PNG&quot; alt=&quot;COUNTIF&quot; /&gt;&lt;/p&gt;
 
-&lt;h5 id=&quot;udf---user-defined-function-using-vba&quot;&gt;UDF - User Defined Function Using VBA&lt;/h5&gt;
+&lt;h4 id=&quot;udf---user-defined-function-using-vba&quot;&gt;UDF - User Defined Function Using VBA&lt;/h4&gt;
 
-&lt;p&gt;Because I was constantly checking if one dataset existed within another, I wrote a User Defined Function in VBA. Checkout the 18 lines of code below! I’ve commented a good bit to help explain the code.&lt;/p&gt;
+&lt;p&gt;Because I was constantly checking if one dataset existed within another, I wrote a User Defined Function in VBA. Checkout the 18 lines of code below! I’ve commented a good bit to help explain what the code is doing.&lt;/p&gt;
 
-&lt;p&gt;The idea is that TRUE or FALSE outputs won’t always clearly explain what’s going on in the data. Using the optional TRUE_MATCH or FALSE_MATCH string variables will help in that aspect.&lt;/p&gt;
+&lt;p&gt;The idea is that returning TRUE or FALSE won’t always clearly explain what’s going on in the data. Using the optional TRUE_MATCH or FALSE_MATCH string variables will help in that aspect.&lt;/p&gt;
+
+&lt;p&gt;As an illustration, column E and F contain World Cup finalists up to 2014. The task is to find out if countries listed in column H have ever been finalists.&lt;/p&gt;
+
+&lt;p&gt;Simply typing &lt;code class=&quot;highlighter-rouge&quot;&gt;=EXISTSIN(cell,range)&lt;/code&gt; will yield standard TRUE and FALSE outputs. Alternatively, by entering a different TRUE or FALSE default, the analysis becomes clear to the reader.&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;=EXISTSIN(cell, range, &quot;Finalist&quot;, &quot;Not a Finalist&quot;)&lt;/code&gt; makes clear who was and who wasn’t in a final match.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/Exists_Using_UDF.PNG&quot; alt=&quot;COUNTIF&quot; /&gt;&lt;/p&gt;
+
+&lt;h5 id=&quot;vba-source-code-for-the-existsin-function&quot;&gt;VBA Source Code for the EXISTSIN Function&lt;/h5&gt;
 
 &lt;div class=&quot;language-vb highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
 &lt;span class=&quot;k&quot;&gt;Function&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;EXISTSIN&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;ByVal&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;CELL&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;As&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Range&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;ByVal&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;LOOK_IN_RANGE&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;As&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Range&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;Optional&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;ByVal&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;TRUE_MATCH&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;As&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;Optional&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;ByVal&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;FALSE_MATCH&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;As&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
@@ -56,11 +66,4 @@
     &lt;span class=&quot;k&quot;&gt;End&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;Select&lt;/span&gt;
 
 &lt;span class=&quot;k&quot;&gt;End&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;Function&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;As an illustration, column E and F contain World Cup finalists up to 2014. In column H, there are 4 countries for which to find out if they have ever been a World Cup finalist.&lt;/p&gt;
-
-&lt;p&gt;Simply typing &lt;code class=&quot;highlighter-rouge&quot;&gt;=EXISTSIN(cell,range)&lt;/code&gt; will yield standard TRUE and FALSE outputs. Alternatively, by entering a different TRUE or FALSE default, the analysis becomes clear to the reader.&lt;/p&gt;
-
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;=EXISTSIN(cell, range, &quot;Finalist&quot;, &quot;Not a Finalist&quot;)&lt;/code&gt; makes clear who was and who wasn’t in a final match.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/Exists_Using_UDF.PNG&quot; alt=&quot;COUNTIF&quot; /&gt;&lt;/p&gt;</content><author><name>Your Name</name></author><summary type="html">Wooh! Existence. Simple enough.</summary></entry></feed>
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Your Name</name></author><summary type="html">Wooh! Existence. Simple enough.</summary></entry></feed>
