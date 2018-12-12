@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-12-11T21:45:51-05:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Some New Title</title><subtitle>An amazing website.</subtitle><author><name>Your Name</name></author><entry><title type="html">Does It Exist</title><link href="http://localhost:4000/does-it-exist/" rel="alternate" type="text/html" title="Does It Exist" /><published>2018-12-07T00:00:00-05:00</published><updated>2018-12-07T00:00:00-05:00</updated><id>http://localhost:4000/does-it-exist</id><content type="html" xml:base="http://localhost:4000/does-it-exist/">&lt;p&gt;Wooh! Existence. Simple enough.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-12-11T21:51:52-05:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Some New Title</title><subtitle>An amazing website.</subtitle><author><name>Your Name</name></author><entry><title type="html">Does It Exist</title><link href="http://localhost:4000/does-it-exist/" rel="alternate" type="text/html" title="Does It Exist" /><published>2018-12-07T00:00:00-05:00</published><updated>2018-12-07T00:00:00-05:00</updated><id>http://localhost:4000/does-it-exist</id><content type="html" xml:base="http://localhost:4000/does-it-exist/">&lt;p&gt;Wooh! Existence. Simple enough.&lt;/p&gt;
 
 &lt;p&gt;While working with data in Excel, often, the question “Does this data exist within another data set?” comes up. Below, I’ve outlined a couple of methods to accomplish this task.&lt;/p&gt;
 
@@ -20,6 +20,8 @@
 &lt;h3 id=&quot;udf---user-defined-function-using-vba&quot;&gt;UDF - User Defined Function Using VBA&lt;/h3&gt;
 
 &lt;p&gt;Because I was constantly checking if one dataset existed within another, I wrote a User Defined Function in VBA. Checkout the 18 lines of code below!&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/Exists_Using_COUNTIF.PNG&quot; alt=&quot;COUNTIF&quot; /&gt;&lt;/p&gt;
 
 &lt;div class=&quot;language-vb highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;'Determines if a given value exists in a range.&lt;/span&gt;
 &lt;span class=&quot;c1&quot;&gt;'Defaults to True and False, with the option to return given true and false values.&lt;/span&gt;
