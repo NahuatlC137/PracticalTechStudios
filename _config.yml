@@ -16,14 +16,14 @@ minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt"
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Some New Title"
+title                    : "Practical Tech Studios"
 title_separator          : "-"
 name                     : "Angel Herrera"
-description              : "An amazing website."
+description              : "Practical examples on Real Estate, Excel and Finance."
 url                      : # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
-repository               : "NahuatlC137/PracticalTechStudios"# GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
-teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
+repository               : "NahuatlC137/PracticalTechStudios"# GitHub username/repo-name
+teaser                   : "/assets/Color_Splash.jpg"
 # breadcrumbs            : false # true, false (default)
 words_per_minute         : 200
 comments:
