@@ -23,7 +23,7 @@ description              : "Practical examples on Real Estate, Excel and Finance
 url                      : www.practicaltechstudios.com
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : "NahuatlC137/PracticalTechStudios" # GitHub username/repo-name
-teaser                   : /assets/images/500x300.png
+teaser                   : "/assets/images/color_splash.jpg"
 # breadcrumbs            : false # true, false (default)
 words_per_minute         : 200
 comments:
@@ -105,8 +105,8 @@ analytics:
 author:
   name             : "Angel Herrera"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "I am an amazing person."
-  location         : "Somewhere"
+  bio              : "Business Systems Analyst"
+  location         : "Greenville, SC"
   email            :
   links:
     - label: "Email"
