@@ -23,7 +23,7 @@ description              : "Practical examples on Real Estate, Excel and Finance
 url                      : www.practicaltechstudios.com
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : "NahuatlC137/PracticalTechStudios" # GitHub username/repo-name
-teaser                   : /assets/Color_Splash.jpg
+teaser                   : /assets/images/500x300.png
 # breadcrumbs            : false # true, false (default)
 words_per_minute         : 200
 comments:
