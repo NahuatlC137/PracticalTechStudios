@@ -20,10 +20,10 @@ title                    : "Practical Tech Studios"
 title_separator          : "-"
 name                     : "Angel Herrera"
 description              : "Practical examples on Real Estate, Excel and Finance."
-url                      : # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
+url                      : www.practicaltechstudios.com
 baseurl                  : # the subpath of your site, e.g. "/blog"
-repository               : "NahuatlC137/PracticalTechStudios"# GitHub username/repo-name
-teaser                   : "/assets/Color_Splash.jpg"
+repository               : "NahuatlC137/PracticalTechStudios" # GitHub username/repo-name
+teaser                   : /assets/Color_Splash.jpg
 # breadcrumbs            : false # true, false (default)
 words_per_minute         : 200
 comments:
@@ -103,7 +103,7 @@ analytics:
 
 # Site Author
 author:
-  name             : "Your Name"
+  name             : "Angel Herrera"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "I am an amazing person."
   location         : "Somewhere"
