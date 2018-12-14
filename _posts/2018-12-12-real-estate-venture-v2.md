@@ -28,4 +28,4 @@ Bathroom and kitchen were installed by my uncle, a true craftsman. I look up to 
 
 My contractor painted with a spray gun. A mini-split for heating and air, flooring and appliances came last. It's going to take me 3 years to fully make back the money I invested at my current rental rate--which is low compared to the market average. In the mean time, I'm making a small monthly return, on top of covering my entire mortgage by renting out the main house. An added bonus is that my nieces say good morning to me every day on my way to work and I get to see my brother often.
 
-Real estate can be a great investment. It's 50% math, 50% psychology. For me, it has been a strict but good teacher. It's allowed me to dive in and pick up some useful skills but it always keeps a hefty ruler which has kept me humble (I hope). My tip--don't stay still.
+Real estate can be a great investment. As with most investments, psychology plays a larger role than initially evident. For me, it has been a strict but good teacher. It's allowed me to dive in and pick up some useful skills but it always keeps a hefty ruler which has kept me humble (I hope). My tip--don't stay still.
