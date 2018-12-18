@@ -26,6 +26,8 @@ People can be wary of contractors. Looking back, it must have been very clear to
 
 Sheetrock comes in twos. I've always wondered why. Maybe they form a pair. Who gives a fuck? Just nail it and get it over with. Sheetrock can also be misleading. The first piece gets installed so easily until you realize that you're doing it all wrong. A learning experience I call it, if you're crazy.
 
+![Sheetrock](/assets/Sheetrock_Installed.PNG)
+
 Bathroom and kitchen were installed by my uncle, a true craftsman. I look up to him. He worked hard to deliver a good product. I think of him and miss him.
 
 ![Cabinets](/assets/Cabinet_Installation.JPG)
