@@ -16,6 +16,8 @@ I took the garage door off. That sucker was heavy. My neighbor warned me to be c
 
 20 cubic yards. Renting dumpsters gives me a weird feeling. They signify a fresh start but they're dirty and ugly as hell. I took out the shop lights, sheetrock, cabinets and the workbench, not to mention all the shit that I had cheerfully piled into the garage and forgotten about. The previous owner had already installed a bathroom. I tore that out. I'd never picked up a toilet before. They are oddly shaped and unpleasant to carry. If you're like me and never noticed, toilets have water, which should be drained prior to an attempt at picking it up.
 
+![Garage](/assets/Clean_Garage.JPG)
+
 I reused some of the old insulation. The ceiling didn't have any and a quick trip to the hardware store fixed that in a jiffy. When installing insulation, use a stick next time and maybe some long sleeves, I told myself. Memories work in a weird ways. I clearly remember nearly itching to death but now I can only smile.
 
 Electrical. Interesting--but there are areas even my brain can't be curious enough to jump into. Maybe it's misconception. After all, fear is part of the human experience and I am a feline. My contractor ended up rigging that together for me. 
@@ -25,6 +27,8 @@ People can be wary of contractors. Looking back, it must have been very clear to
 Sheetrock comes in twos. I've always wondered why. Maybe they form a pair. Who gives a fuck? Just nail it and get it over with. Sheetrock can also be misleading. The first piece gets installed so easily until you realize that you're doing it all wrong. A learning experience I call it, if you're crazy.
 
 Bathroom and kitchen were installed by my uncle, a true craftsman. I look up to him. He worked hard to deliver a good product. I think of him and miss him.
+
+![Cabinets](/assets/Cabinet_Installation.JPG)
 
 My contractor painted with a spray gun. A mini-split for heating and air, flooring and appliances came last. It's going to take me 3 years to fully make back the money I invested at my current rental rate--which is low compared to the market average. In the mean time, I'm making a small monthly return, on top of covering my entire mortgage by renting out the main house. An added bonus is that my nieces say good morning to me every day on my way to work and I get to see my brother often.
 
