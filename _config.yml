@@ -299,7 +299,7 @@ defaults:
   # _excel
   - scope:
       path: ""
-      type: excel
+      type: Excel
     values:
       layout: single
       author_profile: true
