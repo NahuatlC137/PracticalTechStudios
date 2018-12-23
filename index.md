@@ -3,35 +3,35 @@ layout: splash
 permalink: /
 header:
   overlay_color: "#5e616c"
-  #overlay_image: /assets/images/mm-home-page-feature.jpg
-  actions:
-    - label: "<i class='fas fa-download'></i> Install now"
-      url: "/docs/quick-start-guide/"
+  overlay_image: /assets/images/color_splash.jpg
+  #actions:
+  #  - label: "<i class='fas fa-download'></i> Install now"
+  #    url: "/docs/quick-start-guide/"
 excerpt: >
-  A flexible two-column Jekyll theme. Perfect for building personal sites, blogs, and portfolios.<br />
-  <small><a href="https://github.com/mmistakes/minimal-mistakes/releases/tag/4.14.1">Latest release v4.14.1</a></small>
+  Practical notes on Excel, Finance, and Real Estate.<br />
+ # <small><a href="https://github.com/mmistakes/minimal-mistakes/releases/tag/4.14.1">Latest release v4.14.1</a></small>
 feature_row:
   - image_path: /assets/excel_logo.svg
-    alt: "customizable"
-    title: "Super customizable"
-    excerpt: "Everything from the menus, sidebars, comments, and more can be configured or set with YAML Front Matter."
-    url: "/docs/configuration/"
+    alt: "excel"
+    title: "Excel Posts"
+    excerpt: "Excerpts on Data Analysis, functions, VBA and Power Query."
+    url: "/collection-archive/"
     btn_class: "btn--primary"
-    btn_label: "Learn more"
+    btn_label: "Explore"
   - image_path: /assets/money_logo.svg
-    alt: "fully responsive"
-    title: "Responsive layouts"
-    excerpt: "Built with HTML5 + CSS3. All layouts are fully responsive with helpers to augment your content."
+    alt: "finance"
+    title: "Finance"
+    excerpt: "Notes on personal finance, investment vehicles and ideas."
     url: "/docs/layouts/"
     btn_class: "btn--primary"
     btn_label: "Learn more"
   - image_path: /assets/real_estate_logo.svg
-    alt: "100% free"
-    title: "100% free"
-    excerpt: "Free to use however you want under the MIT License. Clone it, fork it, customize it... whatever!"
+    alt: "Real Estate"
+    title: "Real Estate"
+    excerpt: "Lessons learned related to my real estate portfolio."
     url: "/docs/license/"
     btn_class: "btn--primary"
-    btn_label: "Learn more"      
+    btn_label: "Learn"      
 ---
 
 {% include feature_row %}

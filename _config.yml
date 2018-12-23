@@ -295,11 +295,25 @@ collections:
   excel:
     output: true
     permalink: /:collection/:path/
+  real_estate:
+    output: true
+    permalink: /:collection/:path/
 defaults:
   # _excel
   - scope:
       path: ""
       type: Excel
+    values:
+      layout: single
+      author_profile: true
+      read_time: true
+      comments: # true
+      share: true
+      related: true
+  # _real_estate
+  - scope:
+      path: ""
+      type: Real Estate
     values:
       layout: single
       author_profile: true
