@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-12-17T22:38:20-05:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Practical Tech Studios</title><subtitle>Practical examples on Real Estate, Excel and Finance.</subtitle><author><name>Angel Herrera</name></author><entry><title type="html">Real Estate Venture V2</title><link href="http://localhost:4000/real-estate-venture-v2/" rel="alternate" type="text/html" title="Real Estate Venture V2" /><published>2018-12-12T00:00:00-05:00</published><updated>2018-12-12T00:00:00-05:00</updated><id>http://localhost:4000/real-estate-venture-v2</id><content type="html" xml:base="http://localhost:4000/real-estate-venture-v2/">&lt;p&gt;Not all stories start where they need to. This is the story of my second rodeo with real estate.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-12-22T23:35:45-05:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Practical Tech Studios</title><subtitle>Practical examples on Real Estate, Excel and Finance.</subtitle><author><name>Angel Herrera</name></author><entry><title type="html">Real Estate Venture V2</title><link href="http://localhost:4000/real-estate-venture-v2/" rel="alternate" type="text/html" title="Real Estate Venture V2" /><published>2018-12-12T00:00:00-05:00</published><updated>2018-12-12T00:00:00-05:00</updated><id>http://localhost:4000/real-estate-venture-v2</id><content type="html" xml:base="http://localhost:4000/real-estate-venture-v2/">&lt;p&gt;Not all stories start where they need to. This is the story of my second rodeo with real estate.&lt;/p&gt;
 
 &lt;p&gt;My projects always begin with moments of unrest. What to do? What to do..? Damn it, why the hell can’t you just stay still. I’ve learned to cherish these moments. Those cogs up in that noggin begin to move at a sluggish pace. Slowly but surely. A thought here and a thought there. Sometimes math, sometimes philosophy.&lt;/p&gt;
 
@@ -30,72 +30,4 @@
 
 &lt;p&gt;My contractor painted with a spray gun. A mini-split for heating and air, flooring and appliances came last. It’s going to take me 3 years to fully make back the money I invested at my current rental rate–which is low compared to the market average. In the mean time, I’m making a small monthly return, on top of covering my entire mortgage by renting out the main house. An added bonus is that my nieces say good morning to me every day on my way to work and I get to see my brother often.&lt;/p&gt;
 
-&lt;p&gt;Real estate can be a great investment. As with most investments, psychology plays a larger role than initially evident. For me, it has been a strict but good teacher. It’s allowed me to dive in and pick up some useful skills but it always keeps a hefty ruler which has kept me humble (I hope). My tip–don’t stay still.&lt;/p&gt;</content><author><name>Angel Herrera</name></author><summary type="html">Not all stories start where they need to. This is the story of my second rodeo with real estate.</summary></entry><entry><title type="html">Does It Exist</title><link href="http://localhost:4000/does-it-exist/" rel="alternate" type="text/html" title="Does It Exist" /><published>2018-12-07T00:00:00-05:00</published><updated>2018-12-07T00:00:00-05:00</updated><id>http://localhost:4000/does-it-exist</id><content type="html" xml:base="http://localhost:4000/does-it-exist/">&lt;p&gt;Wooh! Existence. Simple enough.&lt;/p&gt;
-
-&lt;p&gt;While working with data in Excel, often, we question “Does this value(s) exist within a data set?”. Below, I’ve outlined a couple of methods to answer this question.&lt;/p&gt;
-
-&lt;h4 id=&quot;vlookup-or-match&quot;&gt;VLOOKUP or MATCH&lt;/h4&gt;
-&lt;p&gt;My go-to function was &lt;code class=&quot;highlighter-rouge&quot;&gt;=VLOOKUP(cell,single_column,1,0)&lt;/code&gt;. If the value exists, it simply returns itself, else #N/A, which means that the value doesn’t exist.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/Exists_Using_VLOOKUP.PNG&quot; alt=&quot;VLOOKUP&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://docs.microsoft.com/en-us/office/vba/api/excel.worksheetfunction.match&quot;&gt;MATCH&lt;/a&gt; will yield the same result, albeit, if the value exists, the function will return the row number of the found value.&lt;/p&gt;
-
-&lt;h4 id=&quot;countif&quot;&gt;COUNTIF&lt;/h4&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://exceljet.net/formula/value-exists-in-a-range&quot; title=&quot;Visit EXCELJET&quot;&gt;EXCELJET&lt;/a&gt; uses &lt;code class=&quot;highlighter-rouge&quot;&gt;=COUNTIF(range, cell) &amp;gt; 0&lt;/code&gt;. This method counts the number of times a value exists within a given range. &lt;code class=&quot;highlighter-rouge&quot;&gt;COUNTIF&lt;/code&gt; has the added ability to check across multiple columns.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/Exists_Using_COUNTIF.PNG&quot; alt=&quot;COUNTIF&quot; /&gt;&lt;/p&gt;
-
-&lt;h4 id=&quot;udf---user-defined-function-using-vba&quot;&gt;UDF - User Defined Function Using VBA&lt;/h4&gt;
-
-&lt;p&gt;Because I was constantly checking if one dataset existed within another, I wrote a User Defined Function in VBA. Checkout the 18 lines of code below! I’ve commented a good bit to help explain what the code is doing.&lt;/p&gt;
-
-&lt;p&gt;The idea is that returning TRUE or FALSE won’t always clearly explain what’s going on in the data. Using the optional TRUE_MATCH or FALSE_MATCH string variables will help in that aspect.&lt;/p&gt;
-
-&lt;p&gt;As an illustration, column E and F contain World Cup finalists up to 2014. The task is to find out if countries listed in column H have ever been finalists.&lt;/p&gt;
-
-&lt;p&gt;Simply typing &lt;code class=&quot;highlighter-rouge&quot;&gt;=EXISTSIN(cell,range)&lt;/code&gt; will yield standard TRUE and FALSE outputs. Alternatively, by entering a different TRUE or FALSE default, the analysis becomes clear to the reader.&lt;/p&gt;
-
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;=EXISTSIN(cell, range, &quot;Finalist&quot;, &quot;Not a Finalist&quot;)&lt;/code&gt; makes clear who was and who wasn’t in a final match.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/Exists_Using_UDF.PNG&quot; alt=&quot;COUNTIF&quot; /&gt;&lt;/p&gt;
-
-&lt;h5 id=&quot;vba-source-code-for-the-existsin-function&quot;&gt;VBA Source Code for the EXISTSIN Function&lt;/h5&gt;
-
-&lt;div class=&quot;language-vb highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
-&lt;span class=&quot;k&quot;&gt;Function&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;EXISTSIN&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;ByVal&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;CELL&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;As&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Range&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;ByVal&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;LOOK_IN_RANGE&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;As&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Range&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;Optional&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;ByVal&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;TRUE_MATCH&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;As&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;Optional&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;ByVal&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;FALSE_MATCH&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;As&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-
-&lt;span class=&quot;c1&quot;&gt;'Declaring variables&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;Dim&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;Exists&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;As&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Boolean&lt;/span&gt;
-
-    &lt;span class=&quot;c1&quot;&gt;'using the CountIf function, EXISTSIN can look across multiple columns.&lt;/span&gt;
-    &lt;span class=&quot;c1&quot;&gt;'if CountIf is greater than 0, it sets the Exists variable to TRUE.&lt;/span&gt;
-    &lt;span class=&quot;c1&quot;&gt;'if CountIf is 0, it sets the Exists variable to FALSE.&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;Exists&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Application&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;CountIf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;LOOK_IN_RANGE&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;CELL&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Value&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;
-    
-    &lt;span class=&quot;k&quot;&gt;Select&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;Case&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Exists&lt;/span&gt;
-    
-        &lt;span class=&quot;c1&quot;&gt;'1. here, the function checks if variable Exists is set to TRUE or FALSE,&lt;/span&gt;
-        &lt;span class=&quot;c1&quot;&gt;'2. it checks whether or not the user is using the optional TRUE_MATCH or FALSE_MATCH strings&lt;/span&gt;
-        &lt;span class=&quot;c1&quot;&gt;'and define the output of EXISTSIN depending on 1 and 2.&lt;/span&gt;
-
-        &lt;span class=&quot;k&quot;&gt;Case&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;True&lt;/span&gt;
-            &lt;span class=&quot;k&quot;&gt;If&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;TRUE_MATCH&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;&quot;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;Then&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;'checking to see if TRUE_MATCH is blank&lt;/span&gt;
-                &lt;span class=&quot;n&quot;&gt;EXISTSIN&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Exists&lt;/span&gt;   &lt;span class=&quot;c1&quot;&gt;'if TRUE_MATCH is blank, simply return TRUE&lt;/span&gt;
-            &lt;span class=&quot;k&quot;&gt;Else&lt;/span&gt;
-                &lt;span class=&quot;n&quot;&gt;EXISTSIN&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;TRUE_MATCH&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;'if TRUE_MATCH isn't blank, then return what the user entered.&lt;/span&gt;
-            &lt;span class=&quot;k&quot;&gt;End&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;If&lt;/span&gt;
-            
-        &lt;span class=&quot;k&quot;&gt;Case&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;False&lt;/span&gt;
-        
-            &lt;span class=&quot;k&quot;&gt;If&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;FALSE_MATCH&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;&quot;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;Then&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;'checking to see if FALSE_MATCH is blank&lt;/span&gt;
-                &lt;span class=&quot;n&quot;&gt;EXISTSIN&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Exists&lt;/span&gt;    &lt;span class=&quot;c1&quot;&gt;'if FALSE_MATCH is blank, simply return FALSE&lt;/span&gt;
-            &lt;span class=&quot;k&quot;&gt;Else&lt;/span&gt;
-                &lt;span class=&quot;n&quot;&gt;EXISTSIN&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;FALSE_MATCH&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;'if FALSE_MATCH isn't blank, then return what the user entered.&lt;/span&gt;
-            &lt;span class=&quot;k&quot;&gt;End&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;If&lt;/span&gt;
-    
-    &lt;span class=&quot;k&quot;&gt;End&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;Select&lt;/span&gt;
-
-&lt;span class=&quot;k&quot;&gt;End&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;Function&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Angel Herrera</name></author><summary type="html">Wooh! Existence. Simple enough.</summary></entry></feed>
+&lt;p&gt;Real estate can be a great investment. As with most investments, psychology plays a larger role than initially evident. For me, it has been a strict but good teacher. It’s allowed me to dive in and pick up some useful skills but it always keeps a hefty ruler which has kept me humble (I hope). My tip–don’t stay still.&lt;/p&gt;</content><author><name>Angel Herrera</name></author><summary type="html">Not all stories start where they need to. This is the story of my second rodeo with real estate.</summary></entry></feed>
