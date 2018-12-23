@@ -1,0 +1,9 @@
+---
+layout: page
+title: Excel
+---
+{% for file in site.excel %}
+    <div class="file">
+        <h2><a href="{{ file.url }}">{{ file.title }}</a></h2>
+    </div>
+{% endfor %}

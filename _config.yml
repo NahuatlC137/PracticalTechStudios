@@ -277,16 +277,31 @@ compress_html:
     envs: development
 
 
-# Defaults
+## Defaults
+#defaults:
+#  # _posts
+#  - scope:
+#      path: ""
+#      type: posts
+#    values:
+#      layout: single
+#      author_profile: true
+#      read_time: true
+#      comments: # true
+#      share: true
+#      related: true
+
+collections:
+  excel:
+    output: true
+    permalink: /:collection/:path/
+
 defaults:
-  # _posts
+  # _excel
   - scope:
       path: ""
-      type: posts
+      type: portfolio
     values:
       layout: single
-      author_profile: true
-      read_time: true
-      comments: # true
+      author_profile: false
       share: true
-      related: true
