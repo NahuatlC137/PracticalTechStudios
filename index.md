@@ -3,7 +3,7 @@ layout: splash
 permalink: /
 header:
   overlay_color: "#5e616c"
-  overlay_image: /assets/images/color_splash.jpg
+  overlay_image: /assets/images/home_page_banner.eps
   #actions:
   #  - label: "<i class='fas fa-download'></i> Install now"
   #    url: "/docs/quick-start-guide/"
@@ -22,14 +22,14 @@ feature_row:
     alt: "finance"
     title: "Finance"
     excerpt: "Notes on personal finance, investment vehicles and ideas."
-    url: "/docs/layouts/"
+    url: "/collection-archive/"
     btn_class: "btn--primary"
     btn_label: "Learn more"
   - image_path: /assets/real_estate_logo.svg
     alt: "Real Estate"
     title: "Real Estate"
     excerpt: "Lessons learned related to my real estate portfolio."
-    url: "/docs/license/"
+    url: "/collection-archive/"
     btn_class: "btn--primary"
     btn_label: "Learn"      
 ---
