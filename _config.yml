@@ -295,13 +295,15 @@ collections:
   excel:
     output: true
     permalink: /:collection/:path/
-
 defaults:
   # _excel
   - scope:
       path: ""
-      type: portfolio
+      type: excel
     values:
       layout: single
-      author_profile: false
+      author_profile: true
+      read_time: true
+      comments: # true
       share: true
+      related: true
