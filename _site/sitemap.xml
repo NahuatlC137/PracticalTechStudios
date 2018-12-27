@@ -1,20 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
-<loc>http://localhost:4000/excel/2018-12-07-does-it-exist/</loc>
+<loc>www.practicaltechstudios.com/excel/2018-12-07-does-it-exist/</loc>
 <lastmod>2018-12-07T00:00:00-05:00</lastmod>
 </url>
 <url>
-<loc>http://localhost:4000/real_estate/2018-12-12-real-estate-venture-v2/</loc>
+<loc>www.practicaltechstudios.com/finance/2018-12-23-checking-your-checking/</loc>
+<lastmod>2018-12-23T00:00:00-05:00</lastmod>
+</url>
+<url>
+<loc>www.practicaltechstudios.com/real_estate/2018-12-12-real-estate-venture-v2/</loc>
 <lastmod>2018-12-12T00:00:00-05:00</lastmod>
 </url>
 <url>
-<loc>http://localhost:4000/collection-archive/</loc>
+<loc>www.practicaltechstudios.com/collection-archive/</loc>
 </url>
 <url>
-<loc>http://localhost:4000/excel/</loc>
+<loc>www.practicaltechstudios.com/excel/</loc>
 </url>
 <url>
-<loc>http://localhost:4000/</loc>
+<loc>www.practicaltechstudios.com/</loc>
 </url>
 </urlset>
