@@ -41,8 +41,8 @@ A quick note on small, local banks or credit unions. I follow the [Bigger Pocket
 
 And that's online banking in a nutshell. Check out the illustrations below and **go check your checkings!**
 
-![Interest_Checking](/assets/checking_sample.PNG)
+![Interest_Checking](/assets/checking_sample.png)
 
 I couldn't find many banks providing cashback checking accounts. I use Discover Bank for my cashback checking. Below is my cashback for the month of November 2018.
 
-![Cashback_Checking](/assets/cashback_sample.PNG)
+![Cashback_Checking](/assets/cashback_sample.png)
