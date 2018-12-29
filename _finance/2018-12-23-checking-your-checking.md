@@ -17,7 +17,7 @@ Currently, there are two types of popular online checking accounts (also referre
 
 **Cashback checking accounts** work by paying you a percentage on the amount you spend on a monthly basis or on the number of transactions you make. Typically, the amount is capped around a couple thousand dollars.
 
-Like any other banking product, interest checking accounts vary from bank to bank. Some may require a minimum balance to trigger interest payments or to reach a higher interest tier, while others pay a lessor percentage past a certain balance. In the case of cashback checking accounts, some transactions may not be eligible for cashback while others may be eligible for a higher cashback percentage. Examples include gas and grocery purchases paying a higher amount than any other transactions.
+Like any other banking product, interest checking accounts vary from bank to bank. Some may require a minimum balance to trigger interest payments or to reach a higher interest tier, while others pay a lesser percentage past a certain balance. In the case of cashback checking accounts, some transactions may not be eligible for cashback while others may be eligible for a higher cashback percentage. Examples include gas and grocery purchases paying a higher amount than any other transactions.
 
 **In general, most online checking accounts:**
 1. Pay higher interest rates on checking *and* savings accounts.
