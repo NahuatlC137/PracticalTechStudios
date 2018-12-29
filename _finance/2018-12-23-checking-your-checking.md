@@ -39,10 +39,10 @@ You may be tempted to open an account with a bank paying the highest interest ra
 
 A quick note on small, local banks or credit unions. I follow the [Bigger Pockets Podcast](https://www.biggerpockets.com/podcast "Visit Bigger Pockets") and have heard many real estate investors say that establishing a relationship with your local bank or credit union will help you in the long run when looking to obtain financing. Take this with a grain of salt as I can't confirm this claim since I've never tried establishing a relationship with a local bank. However, if you do need a physical bank then this may be a better option especially if you forsee the need for financing in the future.
 
-And that's online banking in a nutshell. Check out the illustrations below, **go check your checkings!**
+And that's online banking in a nutshell. Check out the illustrations below and **go check your checkings!**
 
-![Interest Checking](/assets/checking_sample.PNG)
+![Interest_Checking](/assets/checking_sample.PNG)
 
 I couldn't find many banks providing cashback checking accounts. I use Discover Bank for my cashback checking. Below is my cashback for the month of November 2018.
 
-![Cashback Checking](/assets/cashback_sample.PNG)
+![Cashback_Checking](/assets/cashback_sample.PNG)
