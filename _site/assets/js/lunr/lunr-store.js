@@ -13,4 +13,9 @@ var store = [{
         "excerpt":"Not all stories start where they need to. This is the story of my second rodeo with real estate. My projects always begin with moments of unrest. What to do? What to do..? Damn it, why the hell can’t you just stay still. I’ve learned to cherish these moments. Those...","categories": [],
         "tags": [],
         "url": "http://localhost:4000/real_estate/2018-12-12-real-estate-venture-v2/",
+        "teaser":"http://localhost:4000/assets/images/color_splash.jpg"},{
+        "title": "V2 Lessons Learned",
+        "excerpt":"Shoulda, Woulda, Coulda… In great part, my efforts at anything I do apart from my job is to get a better understanding of life and to nurture my endless pursuit of knowledge, both daunting and joyful efforts. Accounting – I knew accounting was important but there are characteristics of accounting...","categories": [],
+        "tags": [],
+        "url": "http://localhost:4000/real_estate/2018-12-30-V2-lessons-learned/",
         "teaser":"http://localhost:4000/assets/images/color_splash.jpg"}]
