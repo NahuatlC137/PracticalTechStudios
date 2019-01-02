@@ -1,0 +1,3 @@
+**Dumpster Rental** - Don't call a dumpster if there isn't enough trash to fill the container at least 75%. Call the dumpster too early and you probably won't fill it completely before pick-up. Call it too late, and you won't be able to work if there is crap everywhere. Some of the trash can be kept out of the house. However, if the city spots the garbage, they may ask you to remove it.
+
+**Purchases** - Purchasing of material should be done until after demolition. If done prior, be ready to move things around multiple times unless you have plenty of room to store things in or a room which will be left alone. When moving stuff around, you run the risk of breaking something, getting things dirty, and in general, it just causes extra headaches.

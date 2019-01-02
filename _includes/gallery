@@ -1,23 +1,23 @@
 {% if include.id %}
-  {% assign gallery = page[include.id] %}
+  {% assign  = page[include.id] %}
 {% else %}
-  {% assign gallery = page.gallery %}
+  {% assign  = page. %}
 {% endif %}
 
 {% if include.layout %}
-  {% assign gallery_layout = include.layout %}
+  {% assign _layout = include.layout %}
 {% else %}
-  {% if gallery.size == 2 %}
-    {% assign gallery_layout = 'half' %}
-  {% elsif gallery.size >= 3 %}
-    {% assign gallery_layout = 'third' %}
+  {% if .size == 2 %}
+    {% assign _layout = 'half' %}
+  {% elsif .size >= 3 %}
+    {% assign _layout = 'third' %}
   {% else %}
-    {% assign gallery_layout = '' %}
+    {% assign _layout = '' %}
   {% endif %}
 {% endif %}
 
-<figure class="{{ gallery_layout }} {{ include.class }}">
-  {% for img in gallery %}
+<figure class="{{ _layout }} {{ include.class }}">
+  {% for img in  %}
     {% if img.url %}
       <a href=
         {% if img.url contains "://" %}

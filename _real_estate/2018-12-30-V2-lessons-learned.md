@@ -2,12 +2,10 @@
 classes: wide
 layout: posts
 gallery:
-    image_path: /assets/images/checking_sample.png
+  - url: /assets/checking_sample.png
+    image_path: /assets/checking_sample.png
     alt: "placeholder image 1"
     title: "Image 1 title caption"
-    image_path: /assets/images/Clean_Garage.JPG
-    alt: "placeholder image 2"
-    title: "Image 2 title caption"
 ---
 
 Shoulda, Woulda, Coulda...
@@ -16,13 +14,14 @@ In great part, my efforts at anything I do apart from my job is to get a better 
 
 **Accounting** -- I knew accounting was important but there are characteristics of accounting which go unappreciated until you implement it in your project. I didn't record much for this project but I have some numbers I can work with.
 
-1. Sum of Contractor expenses -  $6,800
-2. Heating and Air -        $5,100
-3. Fridge and Stove -$1,100
-4. Hardware store purchases -$5,000
-5. Miscellaneous -$2,000
-
-Total Invested: **$20,000**
+<table>
+  <tr><td>Sum of Contractor expenses</td><td>$6,800</td></tr>
+  <tr><td>Heating and Air</td><td>$5,100</td></tr>
+  <tr><td>Fridge and Stove</td><td>$1,100</td></tr>
+  <tr><td>Hardware store purchases</td><td>$5,000</td></tr>
+  <tr><td>Miscellaneous</td><td>$2,000</td></tr>
+  <tr><td style="font-weight:bold">Investment Total</td><td>$20,000</td></tr>
+</table>
 
 **Without proper accounting:**
 1. Understanding returns is difficult.
@@ -46,4 +45,4 @@ Ask your contractor to make a list of materials for you or to text you every tim
 
 **Install a separate power meter** - Currently, our power is hooked up to the main house. The power bill is split based on the square footage. My power bill is much less now, but I believe it would be even lower had I installed a separate meter.
 
-{% include gallery caption="This is a sample gallery with **Markdown support**." %}
+{% include gallery %}
